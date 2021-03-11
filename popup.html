@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tooltip.css" />
+  </head>
+  <body>
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" />
+    <hr />
+    <div id="add-form-wrapper">
+      <form id="add-form">
+        <label for="roomname">Room Name:</label><br />
+        <input type="text" id="roomname" name="roomname" /><br />
+        <label for="url">URL:</label><br />
+        <input type="url" id="url" name="url" /><br />
+        <label for="code">Code:</label><br />
+        <input type="code" id="code" name="code" /><br />
+        <input id="submit-button" class="button" type="submit" value="Submit" />
+        <button id="cancel-button">Cancel</button>
+      </form>
+    </div>
+    <button id="add-button">Add new room info</button>
+    <hr />
+    <!-- Link Buttons -->
+    <div id="button-wrapper"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
