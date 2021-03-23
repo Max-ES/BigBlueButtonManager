@@ -1,7 +1,7 @@
 {
   "name": "BigBlueButton Manager",
   "description": "Never ask your fellow students for links and codes again!",
-  "version": "1.0",
+  "version": "1.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -13,7 +13,7 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": ["storage", "tabs", "activeTab", "scripting", "clipboardWrite"],
+  "permissions": ["storage", "scripting", "clipboardWrite"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
