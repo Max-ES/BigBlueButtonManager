@@ -1,7 +1,7 @@
 {
   "name": "BBB Manager",
   "description": "Never ask your fellow students for links and codes again!",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
@@ -13,7 +13,7 @@
       "run_at": "document_end"
     }
   ],
-  "permissions": ["storage", "scripting", "clipboardWrite"],
+  "permissions": ["storage", "clipboardWrite"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
