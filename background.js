@@ -4,18 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
     function (result) {
       if (result.rooms == null) {
         setRooms([]);
-      } else {
-        let rooms = result.rooms;
-        let idsWereReseted = false;
-        for (const room of rooms) {
-          if (!room.id) {
-            room = addIdToRoom(room);
-            idsWereReseted = true;
-          }
-        }
-        idsWereReseted ? setRooms(rooms) : "";
       }
-
       if (result.username == null) {
         setUsername("Peter Champ");
       }
@@ -32,6 +21,23 @@ chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
   if (request.message == "addRoom") addRoom(request.room);
   if (request.message == "addMultipleRooms") addMultipleRooms(request.rooms);
   if (request.message == "deleteRoom") deleteRoom(request.room);
+});
+
+// add ids to rooms, if there aren't any
+chrome.storage.sync.get(["rooms"], function (result) {
+  let rooms = result.rooms;
+  let idsWereReseted = false;
+  for (let room of rooms) {
+    if (!room.id) {
+      console.log("found room without id... setting id...");
+      room = addIdToRoom(room);
+      idsWereReseted = true;
+    }
+  }
+  if (idsWereReseted) {
+    console.log({ rooms });
+    setRooms(rooms);
+  }
 });
 
 function openRoomPage(url) {
