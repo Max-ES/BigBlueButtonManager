@@ -21,6 +21,34 @@
       </form>
     </div>
     <button id="add-button">Add new room info</button>
+    <div id="import-export-wrapper">
+      <div class="tooltip" id="export-wrapper">
+        <span class="tooltiptext" id="export-tooltiptext"
+          >Copy every room info to your clipboard</span
+        >
+        <button id="export-button">Export room info</button>
+      </div>
+      <div class="tooltip" id="import-wrapper">
+        <span class="tooltiptext"
+          >Import room info from your fellow students</span
+        >
+        <button id="import-button">Import room info</button>
+      </div>
+    </div>
+    <div id="import-form-wrapper">
+      <form id="import-form">
+        <label for="json">JSON-Array:</label><br />
+        <input type="text" id="json" name="json" /><br />
+        <span id="import-error-text"></span>
+        <input
+          id="import-submit-button"
+          class="button"
+          type="submit"
+          value="Import"
+        />
+      </form>
+      <button id="import-cancel-button">Cancel</button>
+    </div>
     <hr />
     <!-- Link Buttons -->
     <div id="button-wrapper"></div>

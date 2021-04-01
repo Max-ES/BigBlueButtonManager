@@ -37,6 +37,28 @@ button,
   border-color: darkcyan;
 }
 
+#import-export-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#export-wrapper, #import-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+#import-form-wrapper {
+  display: none;
+}
+
+#import-error-text {
+  color: tomato;
+}
+
+#export-wrapper {
+  margin-right: 8px;
+}
+
 .delete-button {
   width: auto;
   flex: none;
@@ -54,7 +76,7 @@ button:hover,
   margin: 4px 0;
 }
 
-#add-form-wrapper {
+#add-form-wrapper, #import-form-wrapper {
   border-radius: 4px;
   background-color: #292a2d;
   padding: 8px;
